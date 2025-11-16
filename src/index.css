@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html, body {
+  background-color: #000; /* Replace #000 with your desired color */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrollbars */
+}
