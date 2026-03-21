@@ -1,17 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { HERO_CONTENT } from "../data";
-import Photo from "../assets/images/photo.jpg";
+import { CONTACT } from "../data";
+import Photo from "../assets/images/photo.jpeg";
 
 import { FaPython, FaReact, FaAws, FaDownload, FaEnvelope } from "react-icons/fa";
 
 const ROLES = [
+  "AWS & DevOps Engineer",
   "Python Full Stack Developer",
   "Data Analyst",
-  "ML & NLP Engineer",
-  "AWS & DevOps Enthusiast",
-  "SQL & MongoDB Expert",
-  "Automation Tester",
 ];
 
 export default function HeroSection() {
@@ -42,7 +39,7 @@ export default function HeroSection() {
   return (
     <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 py-20 px-6">
 
-      {/* LEFT SIDE (Same layout as your old code) */}
+      {/* LEFT SIDE */}
       <div className="flex flex-col justify-center">
 
         {/* NAME */}
@@ -53,18 +50,14 @@ export default function HeroSection() {
               className="inline-block"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.5,
-                delay: index * 0.08,
-                ease: "easeOut",
-              }}
+              transition={{ duration: 0.5, delay: index * 0.08 }}
             >
               {letter === " " ? "\u00A0" : letter}
             </motion.span>
           ))}
         </h1>
 
-        {/* Rotating Role */}
+        {/* ROLE */}
         <p className="mt-4 text-xl md:text-2xl text-gray-300">
           I am{" "}
           <span className="text-white font-semibold">
@@ -73,77 +66,95 @@ export default function HeroSection() {
           </span>
         </p>
 
+        {/* TAGLINE */}
+          <motion.p
+  className="text-gray-200 mt-8 text-lg leading-relaxed text-justify 
+             [text-align-last:left] hyphens-auto break-words max-w-[85%]"
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+>
+ I am an AWS & DevOps Engineer with hands-on experience in deploying scalable applications and managing cloud infrastructure. I have completed AWS certification from Udemy and am currently working at Arohak Technologies, where I work on AWS and cloud-based solutions, gaining practical experience in real-time deployments and CI/CD pipeline implementation.
+</motion.p>
+
         {/* BADGES */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
-          {ROLES.map((r, i) => (
-            <motion.div
-              key={i}
-              whileHover={{ scale: 1.05, y: -5 }}
-              className={`
-                flex items-center gap-2 px-4 py-3 rounded-xl text-white font-semibold text-sm 
-                shadow-lg border border-white/10 transition-all
-                ${i % 3 === 0 ? "bg-gradient-to-r from-blue-600 to-cyan-500" : ""}
-                ${i % 3 === 1 ? "bg-gradient-to-r from-purple-500 to-pink-500" : ""}
-                ${i % 3 === 2 ? "bg-gradient-to-r from-yellow-400 to-orange-400" : ""}
-              `}
-            >
-              {i % 3 === 0 && <FaPython />}
-              {i % 3 === 1 && <FaReact />}
-              {i % 3 === 2 && <FaAws />}
-              <span>{r}</span>
-            </motion.div>
-          ))}
-        </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-5 mt-8">
 
-        {/* PARAGRAPH — EXACTLY LIKE OLD STYLE (DO NOT CHANGE) */}
-        <motion.p
-          className="text-gray-200 mt-8 text-lg leading-relaxed max-w-[85%]"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          {HERO_CONTENT}
-        </motion.p>
+  {ROLES.map((r, i) => (
+    <motion.div
+      key={i}
+      whileHover={{ scale: 1.08, y: -6 }}
+      transition={{ type: "spring", stiffness: 300 }}
+      className={`
+        flex items-center justify-center gap-2 px-5 py-3 
+        rounded-full text-white font-semibold text-sm 
+        shadow-lg cursor-pointer backdrop-blur-md border border-white/10
+        relative overflow-hidden
+        ${i === 0 ? "bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-400" : ""}
+        ${i === 1 ? "bg-gradient-to-r from-purple-600 via-pink-500 to-purple-400" : ""}
+        ${i === 2 ? "bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-300 text-black" : ""}
+      `}
+    >
+      {/* Glow Effect */}
+      <span className="absolute inset-0 bg-white/10 opacity-0 hover:opacity-100 transition duration-300 rounded-full"></span>
 
+      {/* Icon */}
+      {i === 0 && <FaAws className="z-10" />}
+      {i === 1 && <FaReact className="z-10" />}
+      {i === 2 && <FaPython className="z-10" />}
+
+      {/* Text */}
+      <span className="z-10">{r}</span>
+    </motion.div>
+  ))}
+
+</div>
+
+       
         {/* BUTTONS */}
-        <div className="flex flex-wrap gap-4 mt-8">
+        <div className="flex flex-wrap gap-3 mt-8">
+
           <motion.a
-            whileHover={{ scale: 1.05, y: -3 }}
+            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="#"
-            className="flex items-center gap-3 px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 
-                       rounded-lg text-white font-bold shadow-lg border border-blue-400/30"
+            href="/Ajay_Karre_Resume.pdf"
+            download
+            className="flex items-center gap-2 px-5 py-2.5 
+                       bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
+                       text-white text-sm font-semibold rounded-full 
+                       shadow-lg hover:shadow-purple-500/40 transition duration-300"
           >
-            <FaDownload /> Download Resume
+            <FaDownload className="text-sm" /> Download
           </motion.a>
 
           <motion.a
-            whileHover={{ scale: 1.05, y: -3 }}
+            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="mailto:email@example.com"
-            className="flex items-center gap-3 px-8 py-3 rounded-lg bg-blue-900/40 border border-blue-500/40 
-                       text-blue-300 font-semibold"
+            href={`mailto:${CONTACT.email}`}
+            className="flex items-center gap-2 px-5 py-2.5 
+                       bg-white/5 backdrop-blur-md border border-white/20
+                       text-blue-300 text-sm font-semibold rounded-full 
+                       hover:bg-blue-500/20 hover:text-white transition duration-300"
           >
-            <FaEnvelope /> Get In Touch
+            <FaEnvelope className="text-sm" /> Contact
           </motion.a>
+
         </div>
       </div>
 
-      {/* RIGHT SIDE (Image unchanged!) */}
+      {/* RIGHT SIDE IMAGE */}
       <div className="flex justify-center lg:justify-end items-center">
         <motion.img
           src={Photo}
-          width="350"
-          height="350"
-          alt="Profile"
-          className="rounded-2xl shadow-xl"
+          alt="Ajay Karre"
+          className="w-80 h-80 object-cover object-[50%_18%] rounded-full shadow-xl mx-auto"
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 1 }}
         />
       </div>
 
-      {/* Cursor blink */}
+      {/* Cursor animation */}
       <style>{`
         .blinking-cursor {
           animation: blink 1s infinite;

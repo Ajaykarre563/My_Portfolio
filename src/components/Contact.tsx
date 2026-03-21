@@ -1,78 +1,70 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { CONTACT } from "../data";
+import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0 },
 };
 
-const slideLeft = {
-  hidden: { opacity: 0, x: -50 },
-  visible: { opacity: 1, x: 0 },
-};
-
-const slideRight = {
-  hidden: { opacity: 0, x: 50 },
-  visible: { opacity: 1, x: 0 },
-};
-
 const Contact = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-20% 0px -20% 0px" });
+  const isInView = useInView(ref, { once: true });
 
   return (
-    <motion.div
+    <section
       ref={ref}
-      className="pb-10 mb-10"
-      initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
-      transition={{ staggerChildren: 0.2 }}
+      className="py-16 px-6 md:px-16 flex flex-col items-center"
     >
       {/* Heading */}
       <motion.h1
         variants={fadeUp}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
         transition={{ duration: 0.6 }}
-        className="text-4xl font-semibold text-gray-300 text-center pt-10 pb-6"
+        className="text-4xl font-bold text-white mb-10"
       >
-        Contact Information
+        Contact Me
       </motion.h1>
 
-      <div className="flex justify-center">
-        <div className="text-xl text-gray-400 text-center space-y-4">
+      {/* Card */}
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        transition={{ duration: 0.8 }}
+        className="bg-white/5 backdrop-blur-lg border border-white/10 
+        rounded-2xl shadow-lg p-8 w-full max-w-xl"
+      >
+        <div className="space-y-6 text-gray-300">
 
           {/* Address */}
-          <motion.p
-            variants={slideLeft}
-            transition={{ duration: 0.6 }}
-            className="p-2"
-          >
-            {CONTACT.address}
-          </motion.p>
+          <div className="flex items-center space-x-4">
+            <FaMapMarkerAlt className="text-pink-400 text-xl" />
+            <p>{CONTACT.address}</p>
+          </div>
 
           {/* Email */}
-          <motion.p
-            variants={fadeUp}
-            transition={{ duration: 0.6 }}
-            className="underline p-2 cursor-pointer hover:text-blue-400 transition-colors duration-300"
+          <div
+            className="flex items-center space-x-4 cursor-pointer hover:text-blue-400 transition"
             onClick={() => window.location.href = `mailto:${CONTACT.email}`}
           >
-            {CONTACT.email}
-          </motion.p>
+            <FaEnvelope className="text-indigo-400 text-xl" />
+            <p className="underline">{CONTACT.email}</p>
+          </div>
 
           {/* Phone */}
-          <motion.p
-            variants={slideRight}
-            transition={{ duration: 0.6 }}
-            className="p-2 cursor-pointer hover:text-green-400 transition-colors duration-300"
+          <div
+            className="flex items-center space-x-4 cursor-pointer hover:text-green-400 transition"
             onClick={() => window.location.href = `tel:${CONTACT.phoneNo}`}
           >
-            {CONTACT.phoneNo}
-          </motion.p>
-
+            <FaPhoneAlt className="text-green-400 text-xl" />
+            <p>{CONTACT.phoneNo}</p>
+          </div>
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+    </section>
   );
 };
 

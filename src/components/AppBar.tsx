@@ -1,66 +1,68 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { CONTACT } from "../data"; // make sure CONTACT.email exists, e.g. { email: "you@domain.com" }
+import { CONTACT } from "../data";
 
 const AppBar = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: -20 }}
+    <motion.header
+      initial={{ opacity: 0, y: -30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="p-4 flex justify-between items-center backdrop-blur-md bg-white/5 shadow-lg border-b border-white/10"
+      className="sticky top-0 z-50 px-6 md:px-16 py-4 flex justify-between items-center 
+      backdrop-blur-lg bg-black/30 border-b border-white/10 shadow-lg"
     >
-      {/* Logo */}
-      <motion.h1
-        className="text-zinc-300 text-4xl font-semibold tracking-wide cursor-pointer select-none"
-        whileHover={{ scale: 1.05 }}
-        transition={{ type: "spring", stiffness: 220 }}
-        aria-label="Home"
-      >
-        AK
-      </motion.h1>
+      {/* Logo + Role */}
+      <div className="flex flex-col cursor-pointer">
+        <motion.h1
+          className="text-white text-2xl md:text-3xl font-bold tracking-wide"
+          whileHover={{ scale: 1.05 }}
+        >
+          Ajay Karre
+        </motion.h1>
 
-      {/* Right side: icons + Get in touch */}
-      <div className="flex items-center space-x-4">
-        <div className="text-gray-200 text-2xl flex items-center">
+        <span className="text-sm text-gray-400 hidden md:block">
+          AWS & DevOps Engineer
+        </span>
+      </div>
+
+      {/* Right Section */}
+      <div className="flex items-center space-x-5">
+        
+        {/* Social Icons */}
+        <div className="flex items-center text-xl text-gray-300">
           <motion.a
-            whileHover={{ scale: 1.15 }}
-            transition={{ type: "spring", stiffness: 300 }}
+            whileHover={{ scale: 1.2 }}
             href="https://github.com/Ajaykarre563"
             target="_blank"
             rel="noopener noreferrer"
-            className="pl-3"
-            aria-label="GitHub"
+            className="mx-2 hover:text-white transition"
           >
-            <FaGithub className="hover:text-white transition duration-200" />
+            <FaGithub />
           </motion.a>
 
           <motion.a
-            whileHover={{ scale: 1.15 }}
-            transition={{ type: "spring", stiffness: 300 }}
+            whileHover={{ scale: 1.2 }}
             href="https://www.linkedin.com/in/ajay-karre-737291268/"
             target="_blank"
             rel="noopener noreferrer"
-            className="pl-3"
-            aria-label="LinkedIn"
+            className="mx-2 hover:text-blue-400 transition"
           >
-            <FaLinkedin className="hover:text-blue-400 transition duration-200" />
+            <FaLinkedin />
           </motion.a>
         </div>
 
-        {/* Get in touch button — opens email client */}
+        {/* Get in Touch */}
         <motion.a
-          whileHover={{ scale: 1.03 }}
-          whileTap={{ scale: 0.98 }}
-          transition={{ type: "spring", stiffness: 300 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
           href={`mailto:${CONTACT.email}`}
-          className="px-4 py-2 rounded-md bg-gradient-to-r from-indigo-500 to-pink-500 text-white font-medium shadow-md hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-indigo-400"
-          aria-label="Get in touch"
+          className="px-4 py-2 rounded-lg bg-gradient-to-r from-indigo-500 to-pink-500 
+          text-white text-sm font-semibold shadow-md hover:shadow-lg transition"
         >
-          Get in touch
+          Contact Me
         </motion.a>
       </div>
-    </motion.div>
+    </motion.header>
   );
 };
 

@@ -1,89 +1,78 @@
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 import { PROJECTS } from "../data";
 
 const Projects = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-20% 0px -20% 0px" });
-
   return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0 }}
-      animate={isInView ? { opacity: 1 } : {}}
-      transition={{ duration: 0.8 }}
-    >
-      <h1 className="text-4xl text-gray-400 text-center p-10">Projects</h1>
-      <div>
-        {PROJECTS.map((data, index) => (
+    <section className="py-16 px-6 md:px-16">
+      
+      {/* Heading */}
+      <h1 className="text-4xl font-bold text-center text-white mb-16">
+        Projects
+      </h1>
+
+      {/* Cards */}
+      <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+        
+        {PROJECTS.map((project, index) => (
           <motion.div
             key={index}
-            className="grid grid-cols-2 p-10"
-            initial={{ opacity: 0, y: 50 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            className="bg-white/5 border border-white/10 backdrop-blur-lg 
+            rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl 
+            hover:scale-[1.02] transition duration-300"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
+            viewport={{ once: true }}
           >
-            {/* Image Section - Slide In From Left */}
-            <motion.div
-              className="col-span-1 text-xl text-gray-400 text-center justify-items-center"
-              initial={{ x: -100, opacity: 0 }}
-              animate={isInView ? { x: 0, opacity: 1 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-            >
+            
+            {/* Image */}
+            <div className="overflow-hidden">
               <img
-                src={data.image}
-                height={200}
-                width={200}
-                className="rounded-lg"
+                src={project.image}
+                alt={project.title}
+                className="w-full h-48 object-cover 
+                transition duration-300 hover:scale-110"
+                onError={(e) => {
+                  e.currentTarget.src = "/fallback.png"; // optional fallback
+                }}
               />
-            </motion.div>
+            </div>
 
-            {/* Details Section - Slide In From Right */}
-            <motion.div
-              className="col-span-1 text-gray-400 pl-20"
-              initial={{ x: 100, opacity: 0 }}
-              animate={isInView ? { x: 0, opacity: 1 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-            >
-              <div className="text-white">{data.title}</div>
-              <div>{data.description}</div>
-              <div>
-                <SkillsCard skills={data.technologies} />
+            {/* Content */}
+            <div className="p-6">
+              
+              {/* Title */}
+              <h2 className="text-xl font-semibold text-white mb-2">
+                {project.title}
+              </h2>
+
+              {/* Description */}
+              <p className="text-gray-400 text-sm leading-relaxed mb-4 text-justify">
+                {project.description}
+              </p>
+
+              {/* Tech Stack */}
+              <div className="flex flex-wrap gap-2">
+                {project.technologies.map((tech, i) => (
+                  <span
+                    key={i}
+                    className="px-3 py-1 text-xs bg-purple-600/20 
+                    text-purple-400 rounded-full border border-purple-500/30 
+                    hover:bg-purple-500/30 transition"
+                  >
+                    {tech}
+                  </span>
+                ))}
               </div>
-            </motion.div>
+
+            </div>
+
           </motion.div>
         ))}
+
       </div>
-    </motion.div>
+    </section>
   );
 };
 
-// SkillsCard Component with Animation
-function SkillsCard({ skills }: { skills: string[] }): JSX.Element {
-  return (
-    <motion.div
-      className="flex gap-4 mt-2"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
-    >
-      {skills.map((d, index) => (
-        <motion.div
-          key={index}
-          className="border border-gray-800 rounded-lg p-2 text-purple-500"
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: index * 0.1 }}
-        >
-          {d}
-        </motion.div>
-      ))}
-    </motion.div>
-  );
-}
-
 export default Projects;
-
-

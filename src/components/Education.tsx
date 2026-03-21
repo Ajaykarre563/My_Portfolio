@@ -1,60 +1,64 @@
 import { EDUCATION } from "../data";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-const Education = () => {
-  // Using useInView hook to trigger animation when the element comes into the viewport
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.3, // Trigger animation when 10% of the component is visible
-  });
 
+const Education = () => {
   return (
-    <div>
-      <h1 className="text-4xl text-gray-400 text-center pb-28 pt-10">
+    <section className="py-16 px-6 md:px-16">
+      
+      {/* Heading */}
+      <h1 className="text-4xl font-bold text-center text-white mb-16">
         Education
       </h1>
-      <div>
-        {EDUCATION.map((details, index) => (
+
+      {/* Timeline Container */}
+      <div className="relative border-l-2 border-gray-700 max-w-4xl mx-auto">
+        
+        {EDUCATION.map((edu, index) => (
           <motion.div
-            ref={ref}
             key={index}
-            className="grid grid-cols-2 text-xs text-gray-400 p-10"
-            initial={{ opacity: 0 }} // Initial state before animation starts
-            animate={{
-              opacity: inView ? 1 : 0, // Fade in when in view
-            }}
-            transition={{ duration: 0.8, delay: index * 0.1 }} // Delay for sequential animation
+            className="mb-12 ml-6"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
+            viewport={{ once: true }}
           >
-            <motion.div
-              className="col-span-1 text-center text-xl"
-              initial={{ x: -50, opacity: 0 }} // Start from the left
-              animate={{ x: inView ? 0 : -50, opacity: inView ? 1 : 0 }} // Animate to original position
-              transition={{ duration: 0.6 }}
-            >
-              {details.year}
-            </motion.div>
-            <motion.div
-              className="col-span-1 pl-20"
-              initial={{ x: 50, opacity: 0 }} // Start from the right
-              animate={{ x: inView ? 0 : 50, opacity: inView ? 1 : 0 }} // Animate to original position
-              transition={{ duration: 0.6 }}
-            >
-              <div className="p-2 font-bold text-xl text-white">
-                {details.institution}
-              </div>
-              <div className="p-2 text-gray-400 text-sm">
-                {details.degree}
-              </div>
-              <div className="p-2 text-gray-400 text-sm">
-                {details.location}
-              </div>
-              <span className="pl-2 font-semibold text-purple-500  text-xl">GPA :</span>
-              <span className="p-2 text-xl">{details.GPA}</span>
-            </motion.div>
+            {/* Dot */}
+            <span className="absolute -left-3 flex items-center justify-center w-6 h-6 bg-indigo-500 rounded-full ring-4 ring-black"></span>
+
+            {/* Card */}
+            <div className="bg-white/5 border border-white/10 backdrop-blur-lg p-6 rounded-xl shadow-md hover:shadow-lg transition">
+              
+              {/* Year */}
+              <p className="text-sm text-indigo-400 mb-1">
+                {edu.year}
+              </p>
+
+              {/* Institution */}
+              <h2 className="text-xl font-semibold text-white">
+                {edu.institution}
+              </h2>
+
+              {/* Degree */}
+              <p className="text-gray-400 text-sm mt-1">
+                {edu.degree}
+              </p>
+
+              {/* Location */}
+              <p className="text-gray-500 text-sm">
+                {edu.location}
+              </p>
+
+              {/* GPA */}
+              <p className="mt-2 text-sm">
+                <span className="text-purple-400 font-semibold">CGPA: </span>
+                <span className="text-white">{edu.GPA}</span>
+              </p>
+            </div>
           </motion.div>
         ))}
+
       </div>
-    </div>
+    </section>
   );
 };
 
