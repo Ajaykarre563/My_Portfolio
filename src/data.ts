@@ -51,7 +51,7 @@ export const EXPERIENCE = [
   },
   {
     year: "2023",
-    role: "Data Science Intern",
+    role: "Data Science trainee",
     company: "Dr. Reddy’s Foundation",
     description:
       "Worked on data analysis and machine learning projects including sentiment analysis and data visualization. Used Python libraries like Pandas, NumPy, and Scikit-learn to extract insights from real-world datasets.",
