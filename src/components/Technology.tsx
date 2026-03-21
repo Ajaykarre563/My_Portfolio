@@ -7,12 +7,23 @@ const skillData: Record<string, { name: string }[]> = {
   "AWS Cloud": [
     { name: "EC2" },
     { name: "VPC" },
+    { name: "VPN" },
+    { name: "ACM" },
     { name: "IAM" },
     { name: "RDS" },
     { name: "S3" },
+    { name: "EBS" },
     { name: "CloudWatch" },
     { name: "Lambda" },
-    { name: "VPN" },
+    { name: "ALB" },
+    { name: "NLB" },
+    { name: "Route53" },
+    { name: "DynamoDB" },
+    { name: "EFS" },
+    { name: "SNS" },
+    { name: "ECS" },
+    { name: "EKS" },
+    { name: "EventBridge" },
     { name: "CloudFormation" },
   ],
 
@@ -21,6 +32,10 @@ const skillData: Record<string, { name: string }[]> = {
     { name: "Kubernetes" },
     { name: "Jenkins" },
     { name: "Terraform" },
+    { name: "Ansible" },
+    { name: "BitBucket"},
+    { name: "CI & CD" },
+    { name: "Bash scripts"},
     { name: "Git" },
     { name: "GitHub" },
     { name: "GitLab" },
@@ -44,7 +59,6 @@ const skillData: Record<string, { name: string }[]> = {
   Database: [
     { name: "PostgreSQL" },
     { name: "MySQL" },
-    { name: "MongoDB" },
   ],
 };
 

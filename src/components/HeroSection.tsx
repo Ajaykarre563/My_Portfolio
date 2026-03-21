@@ -7,8 +7,9 @@ import { FaPython, FaReact, FaAws, FaDownload, FaEnvelope } from "react-icons/fa
 
 const ROLES = [
   "AWS & DevOps Engineer",
-  "Python Full Stack Developer",
   "Data Analyst",
+  "Python Full Stack Developer",
+  
 ];
 
 export default function HeroSection() {
