@@ -92,14 +92,14 @@ export default function HeroSection() {
         <div className="flex flex-wrap gap-3 mt-6">
 
           <a
-            href="/Ajay_Karre_Resume.pdf"
-            download
-            className="flex items-center gap-2 px-4 py-2 text-sm 
-                       bg-gradient-to-r from-purple-500 to-pink-500 
-                       text-white rounded-full"
-          >
-            <FaDownload /> Download
-          </a>
+  href="/My_Portfolio/Ajay_Karre_Resume.pdf"
+  download
+  className="flex items-center gap-2 px-4 py-2 text-sm 
+             bg-gradient-to-r from-purple-500 to-pink-500 
+             text-white rounded-full"
+>
+  <FaDownload /> Download
+</a>
 
           <a
             href={`mailto:${CONTACT.email}`}
