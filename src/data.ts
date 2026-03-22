@@ -5,13 +5,13 @@ export const HERO_CONTENT = `I am an AWS & DevOps Engineer with hands-on experie
 
 
 /* ABOUT SECTION */
-export const ABOUT_TEXT = `I am an AWS & DevOps Engineer with practical experience in deploying and managing real-time applications in cloud environments.
+export const ABOUT_TEXT = `I am an AWS & DevOps Engineer with practical experience in designing, deploying, and managing scalable cloud-based applications.
 
-During my internship at Arohak Technologies, I worked on real-world projects like Crenma and Secure Transfer, where I handled complete deployment including AWS services such as EC2, VPC, VPN, IAM, and PostgreSQL. I deployed UI, backend, and database on Linux servers and implemented CI/CD pipelines.
+During my internship at Arohak Technologies, I worked on real-time projects such as Crenma and Secure Transfer, where I handled complete deployment using AWS services including EC2, VPC, IAM, RDS, and S3. I implemented CI/CD pipelines, automated infrastructure using Terraform, and managed Linux-based servers to ensure high availability and system reliability.
 
-I also worked on secure file transfer systems using tools like CrushFTP, WinSCP, and PuTTY. My responsibilities included infrastructure setup, automation using Terraform, troubleshooting, and ensuring system reliability.
+I also have a strong foundation in Data Science, where I worked on data analysis, machine learning, and visualization projects using Python libraries like Pandas, NumPy, and Scikit-learn. My experience includes data preprocessing, feature engineering, and building models to extract meaningful insights.
 
-I am passionate about cloud technologies, DevOps practices, and building scalable systems.`;
+I am passionate about cloud technologies, DevOps practices, and building efficient, secure, and scalable systems. I continuously strive to learn new tools and technologies to improve my skills and contribute effectively to real-world projects.`;
 
 
 /* EDUCATION */
@@ -98,10 +98,10 @@ export const EXPERIENCE = [
 /* PROJECTS (ONLY REAL-TIME PROJECTS) */
 export const PROJECTS = [
   {
-    title: "Crenma Project (DevOps Deployment)",
+    title: "Crenma Project",
     image: crenma, // ✅ use imported image
     description:
-      "Deployed a full-stack application including UI, backend, and database on AWS infrastructure. Configured EC2, VPC, VPN, IAM, and PostgreSQL. Implemented CI/CD pipelines, managed Linux servers, and handled end-to-end deployment, troubleshooting, and automation using Terraform.",
+      "Worked on deploying and managing an application in AWS with a focus on certificate renewal to handle SSL certificates and connected them with an Application Load Balancer (ALB) to enable secure HTTPS communication. Deployed the UI, backend, and database on EC2 inside a VPC. Configured IAM, VPN, and PostgreSQL database. Built CI/CD pipelines using Jenkins, used Docker for containerization, and automated deployments with Terraform. Ensured the application runs securely and smoothly with proper certificate renewal.",
     technologies: [
       "AWS",
       "EC2",
@@ -113,13 +113,18 @@ export const PROJECTS = [
       "Jenkins",
       "Linux",
       "CI/CD",
+      "Docker",
+      "ECR",
+      "ECS",
+      "ALB",
+      "Elastic ip",
     ],
   },
   {
     title: "Secure Transfer Project",
     image: st, // ✅ use imported image
     description:
-      "Built and deployed a secure file transfer system using CrushFTP, WinSCP, and PuTTY. Configured cloud infrastructure with VPC, VPN, EC2, and PostgreSQL. Ensured secure communication, implemented CI/CD pipelines, and performed system troubleshooting and backend deployment.",
+      "Designed, deployed, and managed a secure file transfer system using tools such as CrushFTP, WinSCP, and PuTTY. Architected and configured AWS infrastructure including EC2, VPC, VPN, and PostgreSQL to ensure secure, reliable, and scalable communication. Implemented CI/CD pipelines for automated deployment and continuous integration. Monitored system performance, handled troubleshooting, and managed backend operations to maintain high availability and data security in a production environment.",
     technologies: [
       "AWS",
       "EC2",
@@ -131,6 +136,13 @@ export const PROJECTS = [
       "PuTTY",
       "Linux",
       "CI/CD",
+      "Docker",
+      "ECR",
+      "ECS",
+      "ALB",
+      "NLB",
+      "Elastic ip",
+      "RDS",
     ],
   },
 ];
