@@ -71,9 +71,9 @@ I am passionate about cloud technologies, DevOps practices, and building efficie
                 ${o===0?"bg-gradient-to-r from-blue-500 to-cyan-400 text-white":""}
                 ${o===1?"bg-gradient-to-r from-purple-500 to-pink-400 text-white":""}
                 ${o===2?"bg-gradient-to-r from-yellow-400 to-orange-400 text-black":""}
-              `,children:[o===0&&P.jsx(T0,{}),o===1&&P.jsx(A4,{}),o===2&&P.jsx(R4,{}),P.jsx("span",{className:"whitespace-nowrap",children:i})]},o))}),P.jsxs("div",{className:"flex flex-wrap gap-3 mt-6",children:[P.jsxs("a",{href:"/Ajay_Karre_Resume.pdf",download:!0,className:`flex items-center gap-2 px-4 py-2 text-sm \r
-                       bg-gradient-to-r from-purple-500 to-pink-500 \r
-                       text-white rounded-full`,children:[P.jsx(M4,{})," Download"]}),P.jsxs("a",{href:`mailto:${rn.email}`,className:`flex items-center gap-2 px-4 py-2 text-sm \r
+              `,children:[o===0&&P.jsx(T0,{}),o===1&&P.jsx(A4,{}),o===2&&P.jsx(R4,{}),P.jsx("span",{className:"whitespace-nowrap",children:i})]},o))}),P.jsxs("div",{className:"flex flex-wrap gap-3 mt-6",children:[P.jsxs("a",{href:"/My_Portfolio/Ajay_Karre_Resume.pdf",download:!0,className:`flex items-center gap-2 px-4 py-2 text-sm \r
+             bg-gradient-to-r from-purple-500 to-pink-500 \r
+             text-white rounded-full`,children:[P.jsx(M4,{})," Download"]}),P.jsxs("a",{href:`mailto:${rn.email}`,className:`flex items-center gap-2 px-4 py-2 text-sm \r
                        border border-gray-400 text-gray-300 \r
                        rounded-full`,children:[P.jsx(R0,{})," Contact"]})]})]}),P.jsx("div",{className:"flex-1 flex justify-end",children:P.jsx("img",{src:C0,alt:"Ajay Karre",className:"w-40 h-40 md:w-80 md:h-80 rounded-full object-cover object-[50%_18%]"})})]})}const z4=()=>P.jsxs("section",{className:"py-16 px-6 md:px-16",children:[P.jsx("h1",{className:"text-4xl font-bold text-center text-white mb-16",children:"Projects"}),P.jsx("div",{className:"grid md:grid-cols-2 gap-10 max-w-6xl mx-auto",children:Bv.map((e,t)=>P.jsxs(ae.div,{className:`bg-white/5 border border-white/10 backdrop-blur-lg \r
             rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl \r
