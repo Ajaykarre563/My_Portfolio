@@ -42,7 +42,7 @@ export const EDUCATION = [
 //Experience and Projects are only real-time projects and experience. No fake projects or experience is added. Only real-time experience and projects are added.
 export const EXPERIENCE = [
   {
-    year: "2024 - Present",
+    year: "2025 - Present",
     role: "AWS & DevOps Engineer Intern",
     company: "Arohak Technologies",
     description:
@@ -75,7 +75,7 @@ export const EXPERIENCE = [
     ],
   },
   {
-    year: "2023",
+    year: "Jul-Oct 2024",
     role: "Data Science Trainee",
     company: "Dr. Reddy’s Foundation",
     description:

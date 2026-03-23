@@ -21,7 +21,7 @@ const skillData: Record<string, { name: string }[]> = {
   ],
 
   Backend: [
-    { name: "Python" }, { name: "Django" }, { name: "FastAPI" },
+    { name: "Python" }, { name: "FastAPI" },
   ],
 
   Frontend: [
@@ -30,7 +30,7 @@ const skillData: Record<string, { name: string }[]> = {
   ],
 
   Database: [
-    { name: "PostgreSQL" }, { name: "MySQL" },
+   { name: "MySQL" },{ name: "MongoDB" },
   ],
 };
 
