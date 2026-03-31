@@ -5,14 +5,11 @@ export const HERO_CONTENT = `I am an AWS & DevOps Engineer with hands-on experie
 
 
 /* ABOUT SECTION */
-export const ABOUT_TEXT = `I am an AWS & DevOps Engineer with practical experience in designing, deploying, and managing scalable cloud-based applications.
+export const ABOUT_TEXT = `I am an AWS & DevOps Engineer with hands-on experience in designing, deploying, and managing scalable cloud-based applications.
 
-During my internship at Arohak Technologies, I worked on real-time projects such as Crenma and Secure Transfer, where I handled complete deployment using AWS services including EC2, VPC, IAM, RDS, and S3. I implemented CI/CD pipelines, automated infrastructure using Terraform, and managed Linux-based servers to ensure high availability and system reliability.
-
-I also have a strong foundation in Data Science, where I worked on data analysis, machine learning, and visualization projects using Python libraries like Pandas, NumPy, and Scikit-learn. My experience includes data preprocessing, feature engineering, and building models to extract meaningful insights.
+During my time at Arohak Technologies as a Software Engineer, I worked on real-time projects such as Crenma and Secure Transfer, where I handled end-to-end deployment using AWS services including EC2, VPC, IAM, RDS, DynamoDB, S3, Application Load Balancer (ALB), Network Load Balancer (NLB), and VPN. I implemented CI/CD pipelines, automated infrastructure using Terraform, and managed Linux-based servers to ensure high availability, scalability, and system reliability.
 
 I am passionate about cloud technologies, DevOps practices, and building efficient, secure, and scalable systems. I continuously strive to learn new tools and technologies to improve my skills and contribute effectively to real-world projects.`;
-
 
 /* EDUCATION */
 export const EDUCATION = [
