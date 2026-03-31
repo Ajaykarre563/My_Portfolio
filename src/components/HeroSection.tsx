@@ -56,7 +56,7 @@ export default function HeroSection() {
 
         {/* DESCRIPTION */}
         <p className="text-gray-300 mt-4 text-sm md:text-lg leading-relaxed text-justify">
-          AWS & DevOps Engineer with hands-on experience in deploying scalable cloud applications and building CI/CD pipelines. Skilled in AWS services, Docker, Terraform, and Linux, with real-time project experience at Arohak Technologies.
+         Software Engineer with hands-on experience in AWS and DevOps, specializing in deploying scalable cloud applications. Experienced in CI/CD pipelines, infrastructure automation, and cloud environment management. Worked on real-time projects at Arohak Technologies, ensuring high availability, scalability, and reliable system performance.
         </p>
 
         {/* SMALL ATTRACTIVE BUTTONS */}
