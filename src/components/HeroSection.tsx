@@ -55,7 +55,7 @@ export default function HeroSection() {
         </p>
 
         {/* DESCRIPTION */}
-        <p className="text-gray-300 mt-4 text-sm md:text-lg leading-relaxed text-justify">
+        <p className="text-gray-300 mt-4 text-sm md:text-lg leading-relaxed text-left">
          Software Engineer with hands-on experience in AWS and DevOps, specializing in deploying scalable cloud applications.Experienced in CI/CD pipelines, infrastructure automation, and cloud environment management. Worked on real-time projects at Arohak Technologies, ensuring high availability, scalability, and reliable system performance.
         </p>
 
