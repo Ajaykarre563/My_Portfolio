@@ -25,8 +25,7 @@ const skillData: Record<string, { name: string }[]> = {
   ],
 
   Frontend: [
-    { name: "HTML" }, { name: "CSS" },
-    { name: "JavaScript" }, { name: "React" },
+    { name: "React" },
   ],
 
   Database: [
