@@ -43,7 +43,7 @@ export const EDUCATION = [
 export const EXPERIENCE = [
   {
     year: "2025 - Present",
-    role: "AWS & DevOps Engineer Intern",
+    role: "Software Engineer",
     company: "Arohak Technologies",
     description:
       "Worked on real-time deployment of scalable applications on AWS using services such as EC2, VPC, IAM, RDS, S3, Route 53, and Load Balancers. Implemented CI/CD pipelines using Jenkins, automated infrastructure using Terraform, and managed Linux servers. Utilized Docker for containerization and performed system monitoring using CloudWatch. Ensured high availability, security, and reliability of applications.",
