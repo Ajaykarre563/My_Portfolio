@@ -9,7 +9,7 @@ export const ABOUT_TEXT = `I am an AWS & DevOps Engineer with hands-on experienc
 
 During my time at Arohak Technologies as a Software Engineer, I worked on real-time projects such as Crenma and Secure Transfer, where I handled end-to-end deployment using AWS services including EC2, VPC, IAM, RDS, DynamoDB, S3, Application Load Balancer (ALB), Network Load Balancer (NLB), and VPN.I implemented CI/CD pipelines,automated infrastructure using Terraform, and managed Linux-based servers to ensure high availability, scalability, and system reliability.
 
-I am passionate about cloud technologies, DevOps practices, and building efficient, secure, and scalable systems. I continuously strive to learn new tools and technologies to improve my skills and contribute effectively to real-world projects.`;
+I'm passionate about cloud technologies, DevOps practices, and building efficient, secure, and scalable systems. I continuously strive to learn new tools and technologies to improve my skills and contribute effectively to real-world projects.`;
 
 /* EDUCATION */
 export const EDUCATION = [
