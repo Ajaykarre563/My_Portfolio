@@ -1,65 +1,92 @@
 import { EDUCATION } from "../data";
 import { motion } from "framer-motion";
+import { FaGraduationCap, FaMapMarkerAlt, FaAward } from "react-icons/fa";
 
-const Education = () => {
+export default function Education() {
   return (
-    <section className="py-16 px-6 md:px-16">
-      
-      {/* Heading */}
-      <h1 className="text-4xl font-bold text-center text-white mb-16">
-        Education
-      </h1>
+    <section id="education" className="py-20 px-6 md:px-16 max-w-6xl mx-auto scroll-mt-20">
+      {/* Section Header */}
+      <div className="text-center max-w-3xl mx-auto mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-xs font-semibold uppercase tracking-wider mb-4"
+        >
+          <FaGraduationCap className="text-sm" /> Academic Foundation
+        </motion.div>
 
-      {/* Timeline Container */}
-      <div className="relative border-l-2 border-gray-700 max-w-4xl mx-auto">
-        
+        <motion.h2
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+          className="text-3xl md:text-5xl font-extrabold text-white tracking-tight"
+        >
+          Education
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+          className="mt-4 text-gray-400 text-sm md:text-base"
+        >
+          Academic qualifications in Computer Science &amp; Engineering.
+        </motion.p>
+      </div>
+
+      {/* Education Timeline */}
+      <div className="relative max-w-4xl mx-auto">
+        <div className="absolute left-4 md:left-6 top-4 bottom-4 w-[2px] bg-gradient-to-b from-indigo-500 via-purple-500 to-transparent" />
+
         {EDUCATION.map((edu, index) => (
           <motion.div
             key={index}
-            className="mb-12 ml-6"
-            initial={{ opacity: 0, y: 40 }}
+            className="relative mb-12 pl-12 md:pl-16"
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.2 }}
+            transition={{ duration: 0.5, delay: index * 0.15 }}
             viewport={{ once: true }}
           >
-            {/* Dot */}
-            <span className="absolute -left-3 flex items-center justify-center w-6 h-6 bg-indigo-500 rounded-full ring-4 ring-black"></span>
+            {/* Timeline Marker */}
+            <div className="absolute left-2 md:left-4 top-2 -translate-x-1/2 flex items-center justify-center">
+              <div className="w-5 h-5 rounded-full bg-neutral-950 border-2 border-indigo-500 flex items-center justify-center shadow-lg shadow-indigo-500/50">
+                <div className="w-2 h-2 rounded-full bg-indigo-400" />
+              </div>
+            </div>
 
             {/* Card */}
-            <div className="bg-white/5 border border-white/10 backdrop-blur-lg p-6 rounded-xl shadow-md hover:shadow-lg transition">
-              
-              {/* Year */}
-              <p className="text-sm text-indigo-400 mb-1">
-                {edu.year}
-              </p>
+            <div className="bg-neutral-900/80 border border-white/10 rounded-2xl p-6 backdrop-blur-md hover:border-indigo-500/30 transition duration-300">
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <h3 className="text-xl font-bold text-white tracking-tight">
+                  {edu.institution}
+                </h3>
+                <span className="text-xs font-mono px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 font-semibold">
+                  {edu.year}
+                </span>
+              </div>
 
-              {/* Institution */}
-              <h2 className="text-xl font-semibold text-white">
-                {edu.institution}
-              </h2>
-
-              {/* Degree */}
-              <p className="text-gray-400 text-sm mt-1">
+              <p className="text-gray-300 text-sm md:text-base font-medium mt-1">
                 {edu.degree}
               </p>
 
-              {/* Location */}
-              <p className="text-gray-500 text-sm">
-                {edu.location}
-              </p>
+              <div className="flex flex-wrap items-center justify-between gap-4 mt-4 pt-3 border-t border-white/5 text-xs text-gray-400">
+                <div className="flex items-center gap-1.5">
+                  <FaMapMarkerAlt className="text-pink-400" />
+                  <span>{edu.location}</span>
+                </div>
 
-              {/* GPA */}
-              <p className="mt-2 text-sm">
-                <span className="text-purple-400 font-semibold">CGPA: </span>
-                <span className="text-white">{edu.GPA}</span>
-              </p>
+                <div className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-white font-semibold">
+                  <FaAward className="text-amber-400" />
+                  <span>Score / GPA: <span className="text-orange-400">{edu.GPA}</span></span>
+                </div>
+              </div>
             </div>
           </motion.div>
         ))}
-
       </div>
     </section>
   );
-};
-
-export default Education;
+}
