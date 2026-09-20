@@ -14,6 +14,7 @@ import {
   FaTerminal,
   FaCheckCircle,
   FaStore,
+  FaBrain,
 } from "react-icons/fa";
 import {
   SiAmazonapigateway,
@@ -60,6 +61,7 @@ const AWS_DOMAINS = [
   "Security & Identity",
   "Monitoring & Ops",
   "Messaging & Integration",
+  "AI & Machine Learning",
   "AWS Marketplace & Third-Party Services",
 ] as const;
 
@@ -252,6 +254,14 @@ const awsSkillsList: (SkillItem & { domain: AwsDomain })[] = [
     icon: <SiAmazonsimpleemailservice className="text-purple-300" />,
   },
 
+  // AI & Machine Learning
+  {
+    name: "Amazon Bedrock",
+    badge: "Generative AI & Foundation Models",
+    domain: "AI & Machine Learning",
+    icon: <FaBrain className="text-pink-400" />,
+  },
+
   // AWS Marketplace & Third-Party Services
   {
     name: "AWS Marketplace",
@@ -442,6 +452,8 @@ export default function Technology() {
                     <span className="inline-block mt-1 text-[9px] font-medium tracking-wide uppercase px-2 py-0.5 rounded bg-white/5 text-gray-400 border border-white/5">
                       {skill.domain === "AWS Marketplace & Third-Party Services"
                         ? "Marketplace"
+                        : skill.domain === "AI & Machine Learning"
+                        ? "GenAI / ML"
                         : skill.domain.split(" ")[0]}
                     </span>
                   </div>

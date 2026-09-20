@@ -45,7 +45,6 @@ export const EXPERIENCE = [
     description:
       "Worked on real-time deployment and management of scalable, secure applications, including the Crenma and SecureTransfers platforms, at Arohak Technologies. Designed and implemented end-to-end AWS cloud infrastructure from scratch, following secure, highly available, and scalable architecture practices. Deployed and managed AWS Infrastructure as Code (IaC) using Terraform and YAML scripting and DevOps practices, automating infrastructure provisioning and application deployments across multiple environments. Managed networking, security, storage, databases, load balancing, monitoring, and application delivery components for production workloads, while implementing security, code-quality, and compliance practices using SonarQube and SOC 2 scanning to maintain secure, reliable, and compliant application environments.",
     technologies: [
-      "AWS",
       "EC2",
       "VPC",
       "IAM",
@@ -76,6 +75,7 @@ export const EXPERIENCE = [
       "AWS CLI",
       "AWS Marketplace",
       "Amazon EventBridge",
+      "Amazon Bedrock",
       "Elastic IP",
       "Docker",
       "Docker Compose",
@@ -101,9 +101,14 @@ export const EXPERIENCE = [
     role: "Data Science Trainee",
     company: "Dr. Reddy’s Foundation",
     description:
-      "Worked on data analysis and machine learning projects including sentiment analysis and data visualization. Performed data preprocessing, cleaning, and feature engineering using Python and its libraries to extract insights from real-world datasets.",
+      "I completed a Data Science course with hands-on experience in data analysis, machine learning, NLP, and data visualization. I worked on projects involving sentiment analysis and glass classification, applying data preprocessing, feature engineering, exploratory data analysis, and machine learning techniques using Python. I also gained experience with tools and libraries such as NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn, and Excel to analyze data and develop data-driven solutions.",
     technologies: [
       "Python",
+      "NumPy",
+      "Pandas",
+      "Matplotlib",
+      "Seaborn",
+      "Scikit-learn",
       "Feature Engineering",
       "EDA",
       "Data Cleaning",
@@ -112,7 +117,6 @@ export const EXPERIENCE = [
       "Machine Learning",
       "NLP",
       "OpenCV",
-      "Power BI",
       "Excel",
     ],
   },
@@ -145,6 +149,7 @@ export const PROJECTS = [
       "SES",
       "Lambda",
       "Amazon EventBridge",
+      "Amazon Bedrock",
       "EFS",
       "SNS",
       "CloudWatch",
