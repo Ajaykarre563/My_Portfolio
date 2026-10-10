@@ -5,9 +5,9 @@ export const HERO_CONTENT = `I am an AWS & DevOps Engineer at Arohak Technologie
 
 
 /* ABOUT SECTION */
-export const ABOUT_TEXT = `At Arohak Technologies, I worked on production projects including Crenma and SecureTransfers, managing AWS infrastructure, application deployments, and DevOps operations. My responsibilities included implementing CI/CD pipelines, Infrastructure as Code using Terraform and YAML, Docker-based deployments, Linux server administration, security controls, monitoring, and compliance practices using SonarQube and SOC 2 scanning. These efforts supported secure, highly available, and reliable production environments.
+export const ABOUT_TEXT = `At Arohak Technologies, I worked on production projects  including Crenma & SecureTransfers, managing end-to-end AWS infrastructure and DevOps workflows. I automated deployments using Terraform and YAML, implemented robust CI/CD pipelines, containerized services with Docker, and maintained high availability across distributed multi-tier environments.
 
-I'm passionate about cloud technologies, DevOps automation, and building efficient, secure, and scalable systems. I continuously expand my technical skills and explore new tools to improve infrastructure, streamline deployments, and solve real-world engineering challenges.`;
+I integrated security and compliance practices using SonarQube and SOC 2 scanning, combined with proactive monitoring and Linux server administration. Driven by modern DevOps practices, I focus on building resilient, automated cloud systems and continuously refining my technical skill set to deliver dependable, production-ready results.`;
 
 /* EDUCATION */
 export const EDUCATION = [
