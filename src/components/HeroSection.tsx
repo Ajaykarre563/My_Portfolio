@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { CONTACT } from "../data";
+import { CONTACT, HERO_CONTENT } from "../data";
 import Photo from "../assets/images/photo.jpeg";
 import {
   FaAws,
@@ -8,6 +8,7 @@ import {
   FaEnvelope,
   FaDocker,
   FaShieldAlt,
+  FaTools,
 } from "react-icons/fa";
 import { SiTerraform, SiKubernetes } from "react-icons/si";
 
@@ -82,20 +83,16 @@ export default function HeroSection() {
           </h1>
 
           {/* Typing Role */}
-          <div className="mt-3 text-xl sm:text-2xl font-semibold text-gray-300 flex items-center justify-center lg:justify-start min-h-[36px]">
-            <span>I build & secure </span>
-            <span className="ml-2 text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-300 font-bold border-b-2 border-orange-400/50 pb-0.5">
+          <div className="mt-3 text-xl sm:text-2xl lg:text-3xl font-bold flex items-center justify-center lg:justify-start min-h-[38px]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-amber-300 to-yellow-400 border-b-2 border-orange-400/50 pb-0.5">
               {displayed}
             </span>
             <span className="text-orange-400 ml-1 animate-pulse font-mono font-normal">|</span>
           </div>
 
           {/* Bio Description */}
-          <p className="mt-5 text-gray-300 text-sm sm:text-base leading-relaxed text-justify sm:text-left">
-            Software Engineer specializing in AWS cloud infrastructure and DevOps automation.
-            Experienced in architecting, deploying, and managing resilient multi-tier systems on AWS,
-            authoring Infrastructure as Code with Terraform, orchestrating containers with Docker &amp; Kubernetes,
-            and establishing automated CI/CD pipelines with zero-downtime releases at Arohak Technologies.
+          <p className="mt-5 text-gray-300 text-sm sm:text-base leading-relaxed text-justify">
+            {HERO_CONTENT}
           </p>
 
           {/* Highlights Pills */}
@@ -103,14 +100,14 @@ export default function HeroSection() {
             <div className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-orange-300 font-medium">
               <FaAws className="text-orange-400" /> AWS Cloud Architecture
             </div>
-            <div className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-purple-300 font-medium">
-              <SiTerraform className="text-purple-400" /> Terraform IaC
+            <div className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-cyan-300 font-medium">
+              <FaTools className="text-cyan-400" /> DevOps &amp; CI/CD
             </div>
-            <div className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-blue-300 font-medium">
-              <SiKubernetes className="text-blue-400" /> Kubernetes &amp; Docker
+            <div className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-purple-300 font-medium">
+              <SiTerraform className="text-purple-400" /> Infrastructure as Code
             </div>
             <div className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-emerald-300 font-medium">
-              <FaShieldAlt className="text-emerald-400" /> VPC &amp; IAM Security
+              <FaShieldAlt className="text-emerald-400" /> Security &amp; Monitoring
             </div>
           </div>
 

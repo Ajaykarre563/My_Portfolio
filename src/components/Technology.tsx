@@ -15,6 +15,8 @@ import {
   FaCheckCircle,
   FaStore,
   FaBrain,
+  FaUserShield,
+  FaClipboardCheck,
 } from "react-icons/fa";
 import {
   SiAmazonapigateway,
@@ -43,6 +45,12 @@ import {
   SiGit,
   SiPython,
   SiMysql,
+  SiJira,
+  SiMicrosoft,
+  SiMicrosoftsharepoint,
+  SiPostgresql,
+  SiOracle,
+  SiSonarqube,
 } from "react-icons/si";
 
 interface SkillItem {
@@ -282,6 +290,9 @@ const OTHER_SKILLS: Record<string, SkillItem[]> = {
     { name: "GitHub", badge: "Version Control", icon: <SiGithub className="text-gray-200" /> },
     { name: "GitLab", badge: "Pipelines & Git", icon: <SiGitlab className="text-orange-500" /> },
     { name: "BitBucket", badge: "Atlassian Repos", icon: <SiBitbucket className="text-blue-500" /> },
+    { name: "Jira", badge: "Agile & Sprint Tracking", icon: <SiJira className="text-blue-500" /> },
+    { name: "Microsoft 365", badge: "Enterprise Collaboration", icon: <SiMicrosoft className="text-sky-500" /> },
+    { name: "SharePoint", badge: "Document & Team Collaboration", icon: <SiMicrosoftsharepoint className="text-teal-500" /> },
     { name: "Git", badge: "Source Control", icon: <SiGit className="text-orange-600" /> },
     { name: "CI/CD Pipelines", badge: "Automated Release", icon: <FaTools className="text-emerald-400" /> },
     { name: "Shell Scripting", badge: "Bash Automation", icon: <FaTerminal className="text-yellow-300" /> },
@@ -294,12 +305,22 @@ const OTHER_SKILLS: Record<string, SkillItem[]> = {
 
   Databases: [
     { name: "MySQL", badge: "Relational SQL", icon: <SiMysql className="text-sky-400" /> },
+    { name: "PostgreSQL", badge: "Relational DB", icon: <SiPostgresql className="text-blue-400" /> },
+    { name: "Oracle DB", badge: "Enterprise Relational DB", icon: <SiOracle className="text-red-500" /> },
+  ],
+
+  "Security & Compliance": [
+    { name: "SonarQube", badge: "Code Quality & SAST Scanning", icon: <SiSonarqube className="text-blue-400" /> },
+    { name: "SOC 2 Scan", badge: "Compliance & Security Audit", icon: <FaClipboardCheck className="text-emerald-400" /> },
+    { name: "Stytch", badge: "Authentication & Access Control", icon: <FaUserShield className="text-indigo-400" /> },
+    { name: "Microsoft 365", badge: "Enterprise Cloud & Identity", icon: <SiMicrosoft className="text-sky-500" /> },
   ],
 };
 
 const CATEGORIES = [
   { id: "AWS Cloud", label: "AWS Cloud Architecture", icon: <FaAws className="text-orange-400" />, count: awsSkillsList.length },
   { id: "DevOps Tools", label: "DevOps & CI/CD", icon: <FaTools className="text-cyan-400" />, count: OTHER_SKILLS["DevOps Tools"].length },
+  { id: "Security & Compliance", label: "Security & Compliance", icon: <FaShieldAlt className="text-rose-400" />, count: OTHER_SKILLS["Security & Compliance"].length },
   { id: "Backend", label: "Backend & Scripting", icon: <FaCode className="text-emerald-400" />, count: OTHER_SKILLS["Backend"].length },
   { id: "Databases", label: "Databases", icon: <FaDatabase className="text-purple-400" />, count: OTHER_SKILLS["Databases"].length },
 ];

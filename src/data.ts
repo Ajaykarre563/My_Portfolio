@@ -1,15 +1,13 @@
 import crenma from "./assets/images/crenma.png";
 import st from "./assets/images/st.png";
 /* HERO SECTION */
-export const HERO_CONTENT = `I am an AWS & DevOps Engineer with hands-on experience in deploying scalable applications and managing cloud infrastructure. I specialize in AWS services, CI/CD pipelines, Linux server management, and infrastructure automation using Terraform and Docker. I focus on building secure, reliable, and production-ready systems and continuously improving my DevOps expertise.`;
+export const HERO_CONTENT = `I am an AWS & DevOps Engineer at Arohak Technologies with hands-on experience in designing, deploying, and managing secure, scalable AWS infrastructure. I specialize in Infrastructure as Code using Terraform and YAML, CI/CD pipeline automation with Jenkins and Bitbucket, containerization with Docker, orchestration with Kubernetes, Linux server administration, and automated application deployments. I also focus on cloud security, monitoring, and infrastructure optimization to ensure reliable, efficient production environments.`;
 
 
 /* ABOUT SECTION */
-export const ABOUT_TEXT = `I am an AWS & DevOps Engineer with hands-on experience in designing, deploying, and managing scalable cloud-based applications.
+export const ABOUT_TEXT = `At Arohak Technologies, I worked on production projects including Crenma and SecureTransfers, managing AWS infrastructure, application deployments, and DevOps operations. My responsibilities included implementing CI/CD pipelines, Infrastructure as Code using Terraform and YAML, Docker-based deployments, Linux server administration, security controls, monitoring, and compliance practices using SonarQube and SOC 2 scanning. These efforts supported secure, highly available, and reliable production environments.
 
-At Arohak Technologies, I worked on real-time production projects including CRENMA and SecureTransfers, handling end-to-end AWS infrastructure, application deployment, and DevOps operations, I implemented CI/CD pipelines, Infrastructure as Code using Terraform and YAML, Docker-based deployments, Linux server administration, security controls, monitoring, and compliance practices using SonarQube and SOC 2 scanning, ensuring secure, highly available, and reliable production environments.
-
-I'm passionate about cloud technologies, DevOps practices, and building efficient, secure, and scalable systems. I continuously strive to learn new tools and technologies to improve my skills and contribute effectively to real-world projects.`;
+I'm passionate about cloud technologies, DevOps automation, and building efficient, secure, and scalable systems. I continuously expand my technical skills and explore new tools to improve infrastructure, streamline deployments, and solve real-world engineering challenges.`;
 
 /* EDUCATION */
 export const EDUCATION = [
@@ -52,7 +50,7 @@ export const EXPERIENCE = [
       "S3",
       "Route 53",
       "CloudFront",
-      "Load Balancers (ALB / NLB)",
+      "Load Balancers",
       "CloudWatch",
       "CloudWatch Alarms",
       "Lambda",
@@ -94,6 +92,8 @@ export const EXPERIENCE = [
       "Stytch Authentication",
       "NFS",
       "LGTM Stack",
+      "Jira",
+      "Microsoft 365"
     ],
   },
   {
@@ -166,8 +166,9 @@ export const PROJECTS = [
       "SOC 2 Scan",
       "Stytch Authentication",
       "CI/CD",
-      "VPN",
-      "Elastic IP",
+      "Jira",
+      "Microsoft 365"
+
     ],
   },
   {
@@ -196,6 +197,7 @@ export const PROJECTS = [
       "VMWare ESXi",
       "SNS",
       "PostgreSQL",
+      "Oracle DB",
       "Jenkins",
       "Bitbucket",
       "Terraform",
@@ -205,6 +207,8 @@ export const PROJECTS = [
       "SOC 2 Scan",
       "CrushFTP",
       "SFTP",
+      "FTPS",
+      "SharePoint",
       "WinSCP",
       "PuTTY",
       "Secrets Manager",
