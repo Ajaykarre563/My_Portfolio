@@ -47,7 +47,6 @@ import {
   SiMysql,
   SiJira,
   SiMicrosoft,
-  SiMicrosoftsharepoint,
   SiPostgresql,
   SiOracle,
   SiSonarqube,
@@ -291,8 +290,6 @@ const OTHER_SKILLS: Record<string, SkillItem[]> = {
     { name: "GitLab", badge: "Pipelines & Git", icon: <SiGitlab className="text-orange-500" /> },
     { name: "BitBucket", badge: "Atlassian Repos", icon: <SiBitbucket className="text-blue-500" /> },
     { name: "Jira", badge: "Agile & Sprint Tracking", icon: <SiJira className="text-blue-500" /> },
-    { name: "Microsoft 365", badge: "Enterprise Collaboration", icon: <SiMicrosoft className="text-sky-500" /> },
-    { name: "SharePoint", badge: "Document & Team Collaboration", icon: <SiMicrosoftsharepoint className="text-teal-500" /> },
     { name: "Git", badge: "Source Control", icon: <SiGit className="text-orange-600" /> },
     { name: "CI/CD Pipelines", badge: "Automated Release", icon: <FaTools className="text-emerald-400" /> },
     { name: "Shell Scripting", badge: "Bash Automation", icon: <FaTerminal className="text-yellow-300" /> },
@@ -382,21 +379,19 @@ export default function Technology() {
               className={`
                 flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs md:text-sm font-medium
                 transition-all duration-300 border
-                ${
-                  isActive
-                    ? "bg-gradient-to-r from-orange-500/20 via-purple-500/20 to-blue-500/20 border-orange-500/50 text-white shadow-lg shadow-orange-500/10"
-                    : "bg-neutral-900/60 border-white/10 text-gray-400 hover:text-white hover:border-white/20 hover:bg-neutral-800/60"
+                ${isActive
+                  ? "bg-gradient-to-r from-orange-500/20 via-purple-500/20 to-blue-500/20 border-orange-500/50 text-white shadow-lg shadow-orange-500/10"
+                  : "bg-neutral-900/60 border-white/10 text-gray-400 hover:text-white hover:border-white/20 hover:bg-neutral-800/60"
                 }
               `}
             >
               <span className="text-base">{cat.icon}</span>
               <span className="font-semibold">{cat.label}</span>
               <span
-                className={`text-[10px] px-1.5 py-0.5 rounded-full font-mono ${
-                  isActive
+                className={`text-[10px] px-1.5 py-0.5 rounded-full font-mono ${isActive
                     ? "bg-orange-500/30 text-orange-200"
                     : "bg-white/5 text-gray-400"
-                }`}
+                  }`}
               >
                 {cat.count}
               </span>
@@ -426,10 +421,9 @@ export default function Technology() {
                     onClick={() => setActiveAwsDomain(domain)}
                     className={`
                       px-3 py-1.5 text-xs rounded-lg font-medium transition-all duration-200 border
-                      ${
-                        isDomainActive
-                          ? "bg-orange-500 text-white border-orange-400 shadow-md shadow-orange-500/20"
-                          : "bg-white/5 text-gray-400 border-white/5 hover:text-gray-200 hover:bg-white/10"
+                      ${isDomainActive
+                        ? "bg-orange-500 text-white border-orange-400 shadow-md shadow-orange-500/20"
+                        : "bg-white/5 text-gray-400 border-white/5 hover:text-gray-200 hover:bg-white/10"
                       }
                     `}
                   >
@@ -474,8 +468,8 @@ export default function Technology() {
                       {skill.domain === "AWS Marketplace & Third-Party Services"
                         ? "Marketplace"
                         : skill.domain === "AI & Machine Learning"
-                        ? "GenAI / ML"
-                        : skill.domain.split(" ")[0]}
+                          ? "GenAI / ML"
+                          : skill.domain.split(" ")[0]}
                     </span>
                   </div>
                 </motion.div>
